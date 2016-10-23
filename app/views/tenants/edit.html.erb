@@ -1,6 +1,9 @@
 <script language="JavaScript">
   Stripe.setPublishableKey("<%= ENV['STRIPE_TEST_PUBLISHABLE_KEY'] %>");
 </script>
+<div id="home">
+    <div class="home muli">
+      <div class="container content"> <br /><br /><br />
 <%= form_for @tenant, url: update_plan_path, html: { class: "#{class_name_for_tenant_form(@tenant)}" } do |f| %>
   <div class="form-group col-md-12 no-side-padding">
     <%= f.label :name, 'Organization' %>
@@ -52,3 +55,6 @@
     <%= f.submit 'Update Plan', class: "btn btn-primary", id: 'update_plan' %>  
   </div>  
 <% end %>
+</div>
+</div>
+</div>

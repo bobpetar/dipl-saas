@@ -33,7 +33,7 @@ class ArtifactsControllerTest < ActionController::TestCase
     get :edit, id: @artifact
     assert_response :success
   end
-
+ 
   test "should update artifact" do
     patch :update, id: @artifact, artifact: { key: @artifact.key, name: @artifact.name, project_id: @artifact.project_id }
     assert_redirected_to artifact_path(assigns(:artifact))

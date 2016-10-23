@@ -8,3 +8,4 @@ class CreateUserProjects < ActiveRecord::Migration
     end
   end
 end
+ 

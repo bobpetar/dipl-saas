@@ -14,18 +14,22 @@
       </div>
     </div>
   <% end %>
-
-  <div class="control-group">
+  <div id="home">
+    <div class="home muli">
+      <div class="container content"> <br /><br /><br />
+  <div class="row">
+  <div class="control-group container col-md-8 col-md-offset-2">
     <%= f.label :title, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :title, :class => 'form-control' %>
     </div>
   </div>
-  <div class="control-group">
+  <div class="control-group container col-md-8 col-md-offset-2">
     <%= f.label :details, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :details, :class => 'form-control' %>
     </div>
+  </div>
   </div>
   <div class="control-group">
     <%= f.label :expected_completion_date, :class => 'control-label' %>
@@ -34,9 +38,13 @@
     </div>
   </div>
   <br />
-  <%= f.hidden_field :tenant_id, value: params[:tenant_id], :class => 'form-control' %>
-  <%= f.submit nil, :class => 'btn btn-primary' %>
-  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-            root_path, :class => 'btn btn-default' %>
-
+  <div class="container col-md-8 col-md-offset-2">
+    <%= f.hidden_field :tenant_id, value: params[:tenant_id], :class => 'form-control' %>
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+              root_path, :class => 'btn btn-default' %>
+  </div>
+</div>
+</div>
+</div>
 <% end %>
